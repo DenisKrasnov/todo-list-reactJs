@@ -40,20 +40,8 @@ export const defaultState = {
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case CREATE:
-      return {
-        ...state,
-        loading: true,
-      };
     case FETCH:
-      return {
-        ...state,
-        loading: true,
-      };
     case UPDATE:
-      return {
-        ...state,
-        loading: true,
-      };
     case DELETE:
       return {
         ...state,
@@ -73,5 +61,6 @@ const reducer = (state = defaultState, action) => {
 // Selectors
 
 export const getTasks = state => state.tasks;
+export const getTaskTitle = state => state.tasks.title;
 
 export default reducer;
